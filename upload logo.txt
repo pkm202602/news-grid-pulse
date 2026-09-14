@@ -1,0 +1,22 @@
+help me step by step to upload logo image
+Here is the exact step-by-step process to upload your logo image safely onto Blogger's servers so you can get the correct link for your new menu code.
+Phase 1: 
+Upload the Logo to Blogger and Get the URLGo to your Blogger Dashboard.
+Click on Posts in the left menu, then click the + New Post button at the top. (Don't worry, we won't publish this post).
+In the post editor toolbar, look for the Insert Image icon (it looks like a small picture mountain) and click it. 
+Select Upload from computer.Click Choose Files, select your logo image from your computer, and upload it.
+Once uploaded, click on the image in the window and click the blue Select button. Your logo will now appear inside the post editor.Look at the top left of the post toolbar for a button shaped like a pencil or text code (< >). 
+Click it and choose HTML View.Look closely at the code text. Find the part that starts with src="https://googleusercontent.com....Copy only the long link inside the quotation marks. 
+It will look similar to this: https://googleusercontent.com...You can now close or delete this draft post. 
+Your image link is safely copied to your clipboard.
+Phase 2: 
+Insert the URL into Your Menu CodeClick on Layout in your Blogger dashboard sidebar.
+Find your custom HTML/JavaScript Gadget that contains the menu script we created earlier. 
+Click Edit.Look at the very top section of the code inside that widget box. 
+Find this exact line:html<img src="PASTE_YOUR_IMAGE_URL_HERE" alt="News Grid" class="inline-logo-img" />
+be cautious while using code.
+Delete the placeholder text PASTE_YOUR_IMAGE_URL_HERE and paste your copied image link inside the quotation marks instead. 
+It should now look like this:html<img src="https://googleusercontent.com..." alt="News Grid" class="inline-logo-img" />
+be cautious when use code.
+Click the orange Save button inside the gadget window.Critical 
+Final Step: Click the Save icon (looks like a floppy disk) at the very bottom right corner of your main Layout dashboard page to apply the updates to your live site.
