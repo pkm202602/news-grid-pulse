@@ -1,0 +1,138 @@
+<nav class="custom-nav-container">
+  <!-- LOGO SECTION (Left Side) -->
+  <div class="nav-logo">
+    <a href="/">News Grid</a>
+  </div>
+
+  <!-- MENU SECTION (Right Side) -->
+  <ul class="menu-main">
+    <li><a href="/">Home</a></li>
+    
+    <!-- Level 1: Features Parent -->
+    <li class="has-drop"><a href="#">Features <span class="arrow">&#9662;</span></a>
+      <ul class="drop-lvl1">
+        
+        <!-- Level 2: Asia Parent -->
+        <li class="has-drop"><a href="/search/label/Asia">Asia <span class="arrow">&#9656;</span></a>
+          <ul class="drop-lvl2">
+            <li><a href="/search/label/Business">Business</a></li>
+            
+            <!-- Level 3: Sports Parent -->
+            <li class="has-drop"><a href="/search/label/Sports">Sports <span class="arrow">&#9656;</span></a>
+              <ul class="drop-lvl3">
+                <li><a href="/search/label/Indoor%20Games">Indoor Games</a></li>
+                <li><a href="/search/label/Outdoor%20Games">Outdoor Games</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="/search/label/Technology">Technology</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/p/sitemap.html">SiteMap</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/search/label/World">World</a></li>
+    <li><a href="/search/label/Finance">Finance</a></li>
+    <li><a href="/search/label/Health">Health</a></li>
+    <li><a href="/search/label/Environment">Environment</a></li>
+  </ul>
+</nav>
+
+<style>
+/* --- INJECTED CODE TO HIDE OLD BLOGGER HEADER --- */
+header.header, .header-outer, .header-info-outer {
+  display: none !important;
+}
+
+/* --- THE NEW INLINE FLEXBOX NAV BAR --- */
+.custom-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes logo left, menu right */
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Logo Styling */
+.nav-logo a {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0b4c8c; /* Matches the clean corporate blue in your sample image */
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+/* Main Menu Horizontal Row */
+.menu-main {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main > li {
+  position: relative;
+}
+.menu-main a {
+  display: block;
+  padding: 10px 16px;
+  color: #555555; /* Soft modern slate grey links */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.menu-main > li > a:hover {
+  color: #0b4c8c; /* Links turn blue on hover */
+}
+
+/* --- THE ROBUST NESTING DROPDOWN MECHANICS --- */
+.custom-nav-container li { position: relative; }
+.custom-nav-container ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  min-width: 190px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: 5px 0;
+  list-style: none;
+}
+/* Side fly-out for level 2 and level 3 sub-menus */
+.custom-nav-container ul ul ul {
+  top: -5px;
+  left: 100%;
+}
+.custom-nav-container ul ul a {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444444;
+}
+.custom-nav-container ul ul li:hover > a {
+  background: #f5f7fa;
+  color: #0b4c8c;
+}
+/* Triggers the nested reveal on cursor hover */
+.custom-nav-container li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.arrow {
+  font-size: 10px;
+  margin-left: 4px;
+  display: inline-block;
+  opacity: 0.6;
+}
+</style>
