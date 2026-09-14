@@ -1,0 +1,125 @@
+<nav class="custom-nav">
+  <ul class="menu-main">
+    <li><a href="/">Home</a></li>
+    
+    <!-- Level 1: Features Parent -->
+    <li class="has-drop"><a href="#">Features <span class="arrow">&#9662;</span></a>
+      <ul class="drop-lvl1">
+        
+        <!-- Level 2: Asia Parent -->
+        <li class="has-drop"><a href="/search/label/Asia">Asia <span class="arrow">&#9656;</span></a>
+          <ul class="drop-lvl2">
+            <li><a href="/search/label/Business">Business</a></li>
+            
+            <!-- Level 3: Sports Parent -->
+            <li class="has-drop"><a href="/search/label/Sports">Sports <span class="arrow">&#9656;</span></a>
+              <ul class="drop-lvl3">
+                <li><a href="/search/label/Indoor%20Games">Indoor Games</a></li>
+                <li><a href="/search/label/Outdoor%20Games">Outdoor Games</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="/search/label/Technology">Technology</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/p/sitemap.html">SiteMap</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/search/label/World">World</a></li>
+    <li><a href="/search/label/Finance">Finance</a></li>
+    <li><a href="/search/label/Health">Health</a></li>
+    <li><a href="/search/label/Environment">Environment</a></li>
+  </ul>
+</nav>
+
+<style>
+/* --- THEME HEADER COMPRESSION SWITCHES --- */
+/* Shrink default Notable theme empty space padding */
+.header-outer, header.header, .header-info-outer {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Balance your title size so it looks proportional */
+.site-title, .header-title, #Header1 h1 {
+  font-size: 28px !important; 
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Remove default sub-title description padding if it exists */
+.site-description, .header-description {
+  margin-top: 5px !important;
+  font-size: 13px !important;
+}
+
+/* --- REFINED DROPDOWN SYSTEM --- */
+.custom-nav {
+  background: #fdfbf7; /* Antique template white */
+  border-top: 1px solid #dfdcd6;
+  border-bottom: 1px solid #dfdcd6;
+  font-family: 'Lora', Georgia, serif;
+  position: relative;
+  z-index: 999;
+  margin-top: 10px;
+}
+.custom-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 10px;
+}
+.menu-main > li {
+  position: relative;
+}
+.menu-main a {
+  display: block;
+  padding: 10px 18px;
+  color: #c85a17; /* Theme warm rust orange color */
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.menu-main a:hover {
+  background: #f4efe6;
+  color: #8c3b0b;
+}
+.custom-nav li { position: relative; }
+.custom-nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #dfdcd6;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+}
+.custom-nav ul ul ul {
+  top: 0;
+  left: 100%;
+}
+.custom-nav li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.arrow {
+  font-size: 11px;
+  margin-left: 5px;
+  display: inline-block;
+  opacity: 0.7;
+}
+</style>
