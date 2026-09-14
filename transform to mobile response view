@@ -1,0 +1,344 @@
+<!-- FONT AWESOME ICONS LIBRARY -->
+<link rel="stylesheet" href="https://cloudflare.com" />
+
+<!-- TIER 1: TOP MINI NAVIGATION BAR WITH SOCIAL ICONS -->
+<div class="top-nav-bar">
+  <div class="top-nav-inner">
+    <!-- Left Side Links -->
+    <ul class="top-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/p/about.html">About</a></li>
+      <li><a href="/p/contact.html">Contact</a></li>
+    </ul>
+    
+    <!-- Right Side Social Icons -->
+    <div class="top-social">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- TIER 2: MAIN NAVIGATION BAR -->
+<nav class="custom-nav-container">
+  <!-- LOGO SECTION (Left Side) -->
+  <div class="nav-logo">
+    <a href="/">
+      <img src="PASTE_YOUR_IMAGE_URL_HERE" alt="News Grid" class="inline-logo-img" />
+    </a>
+  </div>
+
+  <!-- RIGHT INTERFACE BLOCK -->
+  <div class="nav-menu-right-block">
+    <!-- MOBILE TOGGLE BUTTON (☰) -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Menu">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- MENU SECTION -->
+    <ul class="menu-main" id="menuMain">
+      <li><a href="/">Home</a></li>
+      
+      <!-- Level 1: Features Parent -->
+      <li class="has-drop"><a href="javascript:void(0);" class="drop-trigger">Features <span class="arrow">&#9662;</span></a>
+        <ul class="drop-lvl1">
+          
+          <!-- Level 2: Asia Parent -->
+          <li class="has-drop"><a href="javascript:void(0);" class="drop-trigger">Asia <span class="arrow">&#9656;</span></a>
+            <ul class="drop-lvl2">
+              <li><a href="/search/label/Business">Business</a></li>
+              
+              <!-- Level 3: Sports Parent -->
+              <li class="has-drop"><a href="javascript:void(0);" class="drop-trigger">Sports <span class="arrow">&#9656;</span></a>
+                <ul class="drop-lvl3">
+                  <li><a href="/search/label/Indoor%20Games">Indoor Games</a></li>
+                  <li><a href="/search/label/Outdoor%20Games">Outdoor Games</a></li>
+                </ul>
+              </li>
+              
+              <li><a href="/search/label/Technology">Technology</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="/p/sitemap.html">SiteMap</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="/search/label/World">World</a></li>
+      <li><a href="/search/label/Finance">Finance</a></li>
+      <li><a href="/search/label/Health">Health</a></li>
+      <li><a href="/search/label/Environment">Environment</a></li>
+    </ul>
+
+    <!-- SEARCH ICON AND TOGGLE PANEL -->
+    <div class="menu-search-wrapper">
+      <button class="search-toggle-btn" id="searchBtn" title="Search"><i class="fa fa-search"></i></button>
+      <div class="search-dropdown-box" id="searchBox">
+        <form action="/search" method="get">
+          <input type="text" name="q" placeholder="Search news..." required="required"/>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- TIER 3: STYLIZED HOT POSTS TICKER BAR -->
+<div class="ticker-wrapper">
+  <div class="ticker-title">
+    <i class="fa-solid fa-fire animate-fire"></i> Hot Posts
+  </div>
+  <div class="ticker-content-container">
+    <div class="ticker-content-scroll">
+      <a href="#" class="ticker-item">⚡ Breaking: This is your first exciting news headline scrolling right here!</a>
+      <a href="#" class="ticker-item">⚡ Update: New technology trends are shaping the future of global markets.</a>
+      <a href="#" class="ticker-item">⚡ Sports: Check out the latest indoor and outdoor games highlights.</a>
+    </div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT FOR MOIBILE MENU & SEARCH TOGGLE -->
+<script>
+// Search Panel Box Toggle
+document.getElementById('searchBtn').addEventListener('click', function(e) {
+  e.stopPropagation();
+  var searchBox = document.getElementById('searchBox');
+  searchBox.classList.toggle('active');
+});
+
+// Mobile Hamburger Button Action
+document.getElementById('mobileMenuToggle').addEventListener('click', function(e) {
+  e.stopPropagation();
+  var menuMain = document.getElementById('menuMain');
+  menuMain.classList.toggle('mobile-active');
+});
+
+// Mobile Accordion Click Logic for Sub-Menus
+var dropTriggers = document.querySelectorAll('.drop-trigger');
+dropTriggers.forEach(function(trigger) {
+  trigger.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      var nextEl = this.nextElementSibling;
+      if (nextEl) {
+        nextEl.classList.toggle('submenu-open');
+      }
+    }
+  });
+});
+
+// Close open panels when clicking outside
+document.addEventListener('click', function(e) {
+  var searchBox = document.getElementById('searchBox');
+  var searchBtn = document.getElementById('searchBtn');
+  var menuMain = document.getElementById('menuMain');
+  var toggleBtn = document.getElementById('mobileMenuToggle');
+  
+  if (searchBox && !searchBox.contains(e.target) && e.target !== searchBtn && !searchBtn.contains(e.target)) {
+    searchBox.classList.remove('active');
+  }
+  if (menuMain && !menuMain.contains(e.target) && e.target !== toggleBtn && !toggleBtn.contains(e.target)) {
+    menuMain.classList.remove('mobile-active');
+  }
+});
+</script>
+
+<style>
+/* --- HIDE THE ENTIRE HUGE NOTABLE ANTIQUE DEFAULT HEADER --- */
+header.header, .header-outer, .header-info-outer, #header-inner, .header-container {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.region-inner, .tabs-outer, .tabs-cap-top, .tabs-cap-bottom, .main-outer, .content-outer {
+  overflow: visible !important;
+  z-index: 999 !important;
+}
+
+/* --- TIER 1: TOP BAR STYLING --- */
+.top-nav-bar {
+  background: #fdfbf7;
+  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+}
+.top-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.top-menu a {
+  display: block;
+  padding: 10px 12px;
+  color: #777777;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.top-menu a:hover { color: #0b4c8c; }
+
+.top-social {
+  display: flex;
+  align-items: center;
+}
+.top-social a {
+  display: inline-block;
+  padding: 10px 10px;
+  color: #777777;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.top-social a:hover { color: #0b4c8c; }
+
+/* --- TIER 2: MAIN CONTAINER --- */
+.custom-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 9999 !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.inline-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.nav-menu-right-block {
+  display: flex;
+  align-items: center;
+}
+
+/* --- MOBILE TOGGLE NAVIGATION BAR INTERFACES --- */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #444444;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menu-main {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main li {
+  position: relative !important;
+}
+.menu-main a {
+  display: block;
+  padding: 10px 16px;
+  color: #444444;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu-main > li > a:hover { color: #0b4c8c; }
+
+/* --- SEARCH CONFIGURATIONS --- */
+.menu-search-wrapper {
+  position: relative;
+  margin-left: 10px;
+}
+.search-toggle-btn {
+  background: none;
+  border: none;
+  color: #444444;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+.search-toggle-btn:hover { color: #0b4c8c; }
+
+.search-dropdown-box {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: none;
+  margin-top: 5px;
+  z-index: 10005;
+}
+.search-dropdown-box.active { display: block; }
+.search-dropdown-box form { display: flex; align-items: center; min-width: 220px; }
+.search-dropdown-box input[type="text"] {
+  border: 1px solid #cccccc;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 100%;
+}
+.search-dropdown-box button {
+  background: #0b4c8c;
+  color: #ffffff;
+  border: none;
+  padding: 7px 12px;
+  font-size: 13px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* --- HOT POSTS TICKER --- */
+.ticker-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #0b4c8c;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  height: 38px;
+}
+.ticker-title {
+  background: #083868;
+  color: #ffffff;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.animate-fire { margin-right: 5px; color: #ff9800; animation: pulse 1.5s infinite alternate; }
+.ticker-content-container { overflow: hidden; position: relative; width: 100%; }
+.ticker-content-scroll { display: flex; white-space: nowrap; padding-left: 100%; animation: ticker-move 25s linear infinite; }
+.ticker-content-scroll:hover { animation-play-state: paused; }
+
