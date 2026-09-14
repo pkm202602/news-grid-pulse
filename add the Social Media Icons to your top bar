@@ -1,0 +1,254 @@
+<!-- FONT AWESOME ICONS LIBRARY -->
+<link rel="stylesheet" href="https://cloudflare.com" />
+
+<!-- TIER 1: TOP MINI NAVIGATION BAR WITH SOCIAL ICONS -->
+<div class="top-nav-bar">
+  <div class="top-nav-inner">
+    <!-- Left Side Links -->
+    <ul class="top-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/p/about.html">About</a></li>
+      <li><a href="/p/contact.html">Contact</a></li>
+    </ul>
+    
+    <!-- Right Side Social Icons -->
+    <div class="top-social">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://pinterest.com" target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- TIER 2: MAIN NAVIGATION BAR WITH LOGO -->
+<nav class="custom-nav-container">
+  <!-- LOGO SECTION (Left Side) -->
+  <div class="nav-logo">
+    <a href="/">
+      <img src="PASTE_YOUR_IMAGE_URL_HERE" alt="News Grid" class="inline-logo-img" />
+    </a>
+  </div>
+
+  <!-- MENU SECTION (Right Side) -->
+  <ul class="menu-main">
+    <li><a href="/">Home</a></li>
+    
+    <!-- Level 1: Features Parent -->
+    <li class="has-drop"><a href="#">Features <span class="arrow">&#9662;</span></a>
+      <ul class="drop-lvl1">
+        
+        <!-- Level 2: Asia Parent -->
+        <li class="has-drop"><a href="/search/label/Asia">Asia <span class="arrow">&#9656;</span></a>
+          <ul class="drop-lvl2">
+            <li><a href="/search/label/Business">Business</a></li>
+            
+            <!-- Level 3: Sports Parent -->
+            <li class="has-drop"><a href="/search/label/Sports">Sports <span class="arrow">&#9656;</span></a>
+              <ul class="drop-lvl3">
+                <li><a href="/search/label/Indoor%20Games">Indoor Games</a></li>
+                <li><a href="/search/label/Outdoor%20Games">Outdoor Games</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="/search/label/Technology">Technology</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/p/sitemap.html">SiteMap</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/search/label/World">World</a></li>
+    <li><a href="/search/label/Finance">Finance</a></li>
+    <li><a href="/search/label/Health">Health</a></li>
+    <li><a href="/search/label/Environment">Environment</a></li>
+  </ul>
+</nav>
+
+<style>
+/* --- HIDE THE ENTIRE HUGE NOTABLE ANTIQUE DEFAULT HEADER --- */
+header.header, .header-outer, .header-info-outer, #header-inner, .header-container {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.region-inner, .tabs-outer, .tabs-cap-top, .tabs-cap-bottom, .main-outer, .content-outer {
+  overflow: visible !important;
+  z-index: 999 !important;
+}
+
+/* --- TIER 1: TOP BAR WORK WITH FLEXBOX --- */
+.top-nav-bar {
+  background: #fdfbf7;
+  border-bottom: 1px solid #eeeeee;
+  width: 100%;
+}
+.top-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between; /* Pushes links to left and icons to right */
+  align-items: center;
+}
+.top-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.top-menu a {
+  display: block;
+  padding: 10px 12px;
+  color: #777777;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.top-menu a:hover {
+  color: #0b4c8c;
+}
+
+/* Social Icons Right Styling */
+.top-social {
+  display: flex;
+  align-items: center;
+}
+.top-social a {
+  display: inline-block;
+  padding: 10px 10px;
+  color: #777777;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.top-social a:hover {
+  color: #0b4c8c; /* Hover করলে ব্রান্ড কালার নীল হবে */
+}
+
+/* --- TIER 2: MAIN INLINE FLEX CONTAINER --- */
+.custom-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 9999 !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.inline-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.menu-main {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main li {
+  position: relative !important;
+}
+.menu-main a {
+  display: block;
+  padding: 10px 16px;
+  color: #444444;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu-main > li > a:hover {
+  color: #0b4c8c;
+}
+
+/* --- DROPDOWN LAYERS SYSTEM --- */
+.menu-main .drop-lvl1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 15 rgba(0,0,0,0.08);
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  min-width: 195px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  padding: 5px 0;
+  list-style: none;
+  z-index: 10000;
+}
+.menu-main .drop-lvl2 {
+  position: absolute;
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 2px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  min-width: 195px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.2s ease;
+  padding: 5px 0;
+  list-style: none;
+  z-index: 10001;
+}
+.menu-main .drop-lvl3 {
+  position: absolute;
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 2px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  min-width: 195px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.2s ease;
+  padding: 5px 0;
+  list-style: none;
+  z-index: 10002;
+}
+
+.menu-main li:hover > .drop-lvl1 { opacity: 1; visibility: visible; transform: translateY(0); }
+.menu-main li:hover > .drop-lvl2 { opacity: 1; visibility: visible; transform: translateX(0); }
+.menu-main li:hover > .drop-lvl3 { opacity: 1; visibility: visible; transform: translateX(0); }
+
+.custom-nav-container ul ul a {
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555555;
+}
+.custom-nav-container ul ul li:hover > a {
+  background: #f5f7fa;
+  color: #0b4c8c;
+}
+.arrow {
+  font-size: 10px;
+  margin-left: 4px;
+  display: inline-block;
+  opacity: 0.6;
+}
+</style>
